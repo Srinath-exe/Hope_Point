@@ -20,7 +20,7 @@ class _ProfileState extends State<Profile> {
             elevation: 0,
             backgroundColor: Colors.white,
             iconTheme: IconThemeData(color: Colors.black),
-            title: Text('Profile', style: TextStyle(color: Colors.black))),
+            title: Text('Profile', style:  TextStyle(color: Colors.black))),
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
             child: Container(

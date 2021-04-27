@@ -70,6 +70,7 @@ class _HomeState extends State<Home> {
 
   Widget carousel() {
     return Container(
+      
         child: Column(children: [
       CarouselSlider(
         options: CarouselOptions(
@@ -90,8 +91,8 @@ class _HomeState extends State<Home> {
                 padding: const EdgeInsets.all(8.0),
                 child: Card(
                   margin: EdgeInsets.only(
-                    top: 5.0,
-                    bottom: 5.0,
+                    top: 1.0,
+                    bottom: 1.0,
                   ),
                   elevation: 6.0,
                   shadowColor: Colors.orangeAccent,

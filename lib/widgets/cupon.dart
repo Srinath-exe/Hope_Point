@@ -100,22 +100,18 @@ class _CuponCardState extends State<CuponCard> {
                   Container(
                     
                       width: MediaQuery.of(context).size.width * 0.45,
-                      height: MediaQuery.of(context).size.height * 0.25,
+                      height: MediaQuery.of(context).size.height * 0.2,
                       color: Colors.transparent,
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          SizedBox(
-                              height: MediaQuery.of(context).size.height * 0.025),
-                          Container(
-                            height: MediaQuery.of(context).size.height * 0.08,
-                            width: MediaQuery.of(context).size.width * 0.45,
-                             child:
+                       
                               Column(
                                 children: [
                                   Text('$point Points',
                                       style: TextStyle(
                                       
-                                          fontSize: 25,
+                                          fontSize: 30,
                                           color: Colors.white,
                                           fontWeight: FontWeight.w700)),
                              
@@ -126,13 +122,10 @@ class _CuponCardState extends State<CuponCard> {
                                   color: Colors.white,
                                   fontWeight: FontWeight.w500)),   ],
                               ),
-                            ),
-                          SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.025*1.0,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(0.0),
-                            child: Column(
+                            
+                       
+                          
+                             Column(
                               children: [
                                 Container(
                                   height: MediaQuery.of(context).size.height * 0.045,
@@ -156,7 +149,7 @@ class _CuponCardState extends State<CuponCard> {
                                      
                               ],
                             ),
-                          ),
+                          
                         ],
                       ))
                 ],

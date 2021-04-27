@@ -92,7 +92,7 @@ class _ReferralPageState extends State<ReferralPage> {
                           height: MediaQuery.of(context).size.height * 0.055,
                           child: TextFormField(
                             initialValue: 'http://www.snhopeholding.co.tz/',
-                             maxLines: 5,
+                           
                             decoration: InputDecoration(
                               filled: true,
                               fillColor: Colors.grey[50],

@@ -24,13 +24,14 @@ class _CuponRedeemState extends State<CuponRedeem> {
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(15))),
         child: Container(
+      
             width: MediaQuery.of(context).size.width * 0.9,
             height: MediaQuery.of(context).size.height * 0.20,
             child: Row(
               children: [
                 Container(
                   width: MediaQuery.of(context).size.width * 0.12,
-                  height: MediaQuery.of(context).size.height * 0.25,
+                  height: MediaQuery.of(context).size.height * 0.2,
                   decoration: BoxDecoration(
                       color: Colors.green[600],
                       borderRadius: BorderRadius.only(
@@ -49,10 +50,11 @@ class _CuponRedeemState extends State<CuponRedeem> {
                   ),
                 ),
                 Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Container(
                       width: MediaQuery.of(context).size.width * 0.9 * 0.85,
-                      height: MediaQuery.of(context).size.height * 0.13,
+                      // height: MediaQuery.of(context).size.height * 0.12,
                       color: Colors.transparent,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -102,7 +104,10 @@ class _CuponRedeemState extends State<CuponRedeem> {
                       ),
                     ),
                     Container(
-                      width: MediaQuery.of(context).size.width * 0.9 * 0.8,
+                      color: Colors.transparent,
+                      width: MediaQuery.of(context).size.width * 0.9 * 0.75,
+                      
+
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -121,7 +126,7 @@ class _CuponRedeemState extends State<CuponRedeem> {
                                     fontWeight: FontWeight.w600)),
                           ]),
                           Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(0.0),
                             child: widget.valid==true? Container(
                               width: MediaQuery.of(context).size.width * 0.3,
                               height: MediaQuery.of(context).size.height * 0.05,

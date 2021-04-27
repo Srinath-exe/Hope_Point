@@ -18,62 +18,64 @@ class _WalletPageState extends State<WalletPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-        body: Container(
-            child: Column(
-          children: [
-            Row(
-              children: [
-                Text('   Hope Point',
-                    style:
-                        TextStyle(fontSize: 20, fontWeight: FontWeight.w600)),
-              ],
-            ),
-            Center(child: cupon()),
-            balance('35 TSh', 800),
-            Row(
-              children: [
-                Text('    Recent',
-                    style:
-                        TextStyle(fontSize: 20, fontWeight: FontWeight.w600)),
-              ],
-            ),
-            SizedBox(height: MediaQuery.of(context).size.height*0.02),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Material(
-                elevation:5,
-                  shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(15))),
+        body: SingleChildScrollView(
+                  child: Container(
+              child: Column(
+            children: [
+              Row(
+                children: [
+                  Text('   Hope Point',
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.w600)),
+                ],
+              ),
+              Center(child: cupon()),
+              balance('35 TSh', 800),
+              Row(
+                children: [
+                  Text('    Recent',
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.w600)),
+                ],
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height*0.02),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Material(
+                  elevation:5,
+                    shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(15))),
 
-                              child: Container(
-                  height: MediaQuery.of(context).size.height * 0.05,
-                  decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-            color: Colors.white,
-            
-          ),
-                  child: ToggleSwitch(
-                    minWidth: 140.0,
-                    minHeight: 90.0,
-                    fontSize: 16.0,
-                    initialLabelIndex: type,
-                    activeBgColor: Colors.orange,
-                    activeFgColor: Colors.white,
-                    inactiveBgColor: Colors.white,
-                    inactiveFgColor: Colors.black,
-                    labels: ['Purchases', 'Reedem',],
-                    onToggle: (index) {
-                        setState(() {
-                          type = index;
-                        });
-                    },
+                                child: Container(
+                    height: MediaQuery.of(context).size.height * 0.05,
+                    decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              color: Colors.white,
+              
+            ),
+                    child: ToggleSwitch(
+                      minWidth: 140.0,
+                      minHeight: 90.0,
+                      fontSize: 16.0,
+                      initialLabelIndex: type,
+                      activeBgColor: Colors.orange,
+                      activeFgColor: Colors.white,
+                      inactiveBgColor: Colors.white,
+                      inactiveFgColor: Colors.black,
+                      labels: ['Purchases', 'Reedem',],
+                      onToggle: (index) {
+                          setState(() {
+                            type = index;
+                          });
+                      },
+                    ),
                   ),
                 ),
               ),
-            ),
-            PurchaseRedeem(index:type),
-          ],
-        )));
+              PurchaseRedeem(index:type),
+            ],
+          )),
+        ));
   }
 
   Widget cupon() {

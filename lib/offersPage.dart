@@ -21,7 +21,7 @@ class _OffersState extends State<Offers> {
               children: [
                 Text('  Offers',
                     style:
-                        TextStyle(fontSize: 30, fontWeight: FontWeight.w600)),
+                        TextStyle(fontSize: 25, fontWeight: FontWeight.w600)),
               ],
             ),
             offers(),
